@@ -2,6 +2,7 @@
 Stitches image in realtime webcam feed
 
 # Youtube Tutorial
+https://youtu.be/eX4SlhdiuZI 
 
 ### Prerequisites
 Python3</br>
@@ -22,6 +23,8 @@ Recommended way to install all dependencies is to first create a virtual environ
 
 Below is a link to pyimagesearch site where it is explained clearly how to install virtualenv based on your operating system and then install opencv:</br>
 https://www.pyimagesearch.com/2018/09/19/pip-install-opencv/</br>
+Below is link of geeksforgeeks article to install virtual environment on Windows:</br>
+https://youtu.be/eX4SlhdiuZI
 
 Install numpy:</br>
 pip install numpy
