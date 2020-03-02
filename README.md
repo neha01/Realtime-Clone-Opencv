@@ -1,7 +1,7 @@
 # Realtime-Clone-Opencv
 Stitches image in realtime webcam feed
 
-# Youtube Tutorial
+# Youtube Tutorial & Demo
 https://youtu.be/eX4SlhdiuZI 
 
 ### Prerequisites
