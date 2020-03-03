@@ -14,6 +14,7 @@ class RealtimeImageStitching():
         images = [img_pil, flip_img_pil]
         x_offset = 0
         total_img_width = sum([image.size[0] for image in images])
+        #calculate maximum of height of all the images
         total_img_height = max([image.size[1] for image in images])
         # create new image to hold our stitched version of original & fliped image
         stitched_img_pil = Image.new('RGB', (total_img_width, total_img_height))
