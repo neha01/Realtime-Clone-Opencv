@@ -13,11 +13,8 @@ class RealtimeImageStitching():
         flip_img_pil = self.convert_to_pil_img(flip_img)
         images = [img_pil, flip_img_pil]
         x_offset = 0
-        total_img_width = 0
-        total_img_height = 0
-        for img in images:
-            total_img_width += img.size[0]
-            total_img_height += img.size[1]
+        total_img_width = sum([image.size[0] for image in images])
+        total_img_height = max([image.size[1] for image in images])
         stitched_img_pil = Image.new('RGB', (total_img_width, total_img_height))
         for img in images:
             stitched_img_pil.paste(img, (x_offset, 0))
@@ -38,15 +35,15 @@ def main():
     """ driver function """
     cap = cv2.VideoCapture(0)
     count = 0
-    img_width = 600
+    img_width = 700
     img_height = 700
     image_stitching = RealtimeImageStitching()
     while True:
-        ret, test_img = cap.read()
+        ret, frame = cap.read()
         if not ret:
             continue
         count += 1
-        resized_img = cv2.resize(test_img, (img_width, img_height))
+        resized_img = cv2.resize(frame, (img_width, img_height))
         resized_flip_img = cv2.flip( resized_img, 1)
         resized_img = image_stitching.convert_bgr_to_rgb_img(resized_img)
         resized_flip_img = image_stitching.convert_bgr_to_rgb_img(resized_flip_img)
