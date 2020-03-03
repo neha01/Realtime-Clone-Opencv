@@ -15,6 +15,7 @@ class RealtimeImageStitching():
         x_offset = 0
         total_img_width = sum([image.size[0] for image in images])
         total_img_height = max([image.size[1] for image in images])
+        # create new image to hold our stitched version of original & fliped image
         stitched_img_pil = Image.new('RGB', (total_img_width, total_img_height))
         for img in images:
             stitched_img_pil.paste(img, (x_offset, 0))
@@ -39,11 +40,14 @@ def main():
     img_height = 700
     image_stitching = RealtimeImageStitching()
     while True:
+        #Capturing frame from video
         ret, frame = cap.read()
+        # continue only if frame read correctly i.e cap.read() return True
         if not ret:
             continue
         count += 1
         resized_img = cv2.resize(frame, (img_width, img_height))
+        #flip resized image across horizontal axis
         resized_flip_img = cv2.flip( resized_img, 1)
         resized_img = image_stitching.convert_bgr_to_rgb_img(resized_img)
         resized_flip_img = image_stitching.convert_bgr_to_rgb_img(resized_flip_img)
