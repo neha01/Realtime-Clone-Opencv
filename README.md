@@ -2,7 +2,7 @@
 Stitches image in realtime webcam feed
 
 # Youtube Tutorial & Demo
-![Watch the video](https://img.youtube.com/vi/eX4SlhdiuZI/maxresdefault.jpg) 
+ https://youtu.be/eX4SlhdiuZI
  
 ### Prerequisites
 Python3</br>
