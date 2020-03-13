@@ -24,7 +24,7 @@ Recommended way to install all dependencies is to first create a virtual environ
 Below is a link to pyimagesearch site where it is explained clearly how to install virtualenv based on your operating system and then install opencv:</br>
 https://www.pyimagesearch.com/2018/09/19/pip-install-opencv/</br>
 Below is link of geeksforgeeks article to install virtual environment on Windows:</br>
-https://youtu.be/eX4SlhdiuZI
+https://www.geeksforgeeks.org/creating-python-virtual-environment-windows-linux/
 
 Install numpy:</br>
 pip install numpy
@@ -39,5 +39,6 @@ python image_sitching.py
 
 ## Acknowledgments
 * https://www.pyimagesearch.com/2018/09/19/pip-install-opencv/
+* https://www.geeksforgeeks.org/creating-python-virtual-environment-windows-linux/
 
 
